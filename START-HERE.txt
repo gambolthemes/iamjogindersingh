@@ -1,0 +1,47 @@
+Joginder Singh Portfolio — Latest files
+
+Version: original reference-style layout, black sidebar, white background, soft mint accents and white JS logo.
+
+CONTENTS
+react-source/ — full editable React + Vite project, including logo SVG and resume page.
+hostinger-upload.zip — ready-built production files.
+
+HOSTINGER
+1. Back up your existing website.
+2. Extract hostinger-upload.zip into your domain web root (usually public_html).
+3. index.html and assets/ must sit directly in public_html, not in an extra folder.
+4. Open your domain over HTTPS. No Node.js server or database is required.
+
+LOCAL EDITING
+Install Node.js 22.12+ or compatible later LTS.
+Open react-source in VS Code, then run:
+  npm ci
+  npm run dev
+After making changes:
+  npm run build
+Upload the contents of the new dist/ folder to Hostinger.
+
+PERSONAL DETAILS
+Edit src/profile.js to add your public email, photo, social links and optional resume PDF.
+Update public/resume.html with verified employment dates, education and contact details.
+Email is currently empty: the contact form does not send messages. Once configured it opens an email draft in the visitor's email app.
+Work screenshots are real homepage captures (2026-10-14) in public/work/. Edit the lists in src/profile.js to add or change client work, HubToolify tools and Gambolthemes products.
+
+Verification: production build passed. Browser visual/interaction testing was not available.
+
+ENQUIRY FORM (Contact section)
+The form validates input and has a spam trap. To make it actually deliver messages, pick ONE:
+  A) PHP on Hostinger: open react-source/public/contact.php and put your email in $to, then in src/profile.js set formEndpoint: './contact.php'. Rebuild and upload dist/ (contact.php included).
+  B) A form service such as Formspree: set formEndpoint to its URL in src/profile.js.
+  C) Email only: set email in src/profile.js. The form then opens the visitor's email app with the enquiry filled in.
+With none of these set, the form tells visitors it is not connected yet and sends nothing.
+contact.php has not been tested on a real server. Send yourself a test enquiry after uploading.
+
+LIVE ADDRESS: https://iamjogindersingh.gambolthemes.net
+Subdomain document root is the iamjogindersingh folder (outside public_html), so the main gambolthemes.net site is not touched.
+1. hPanel > File Manager > open the subdomain's folder (the iamjogindersingh folder you created).
+2. Upload hostinger-upload.zip there and Extract. index.html, assets/ and .htaccess must sit directly inside that folder, not in an extra subfolder.
+3. Delete the zip afterwards. Make sure hidden files are shown so .htaccess is visible.
+4. hPanel > Websites > Advanced > SSL: make sure SSL is active for the subdomain and turn on "Force HTTPS".
+5. Open the address in a private window and hard-refresh (Ctrl+F5). Check /robots.txt and /og-image.jpg load.
+Later updates: npm run build in react-source, then upload the new dist contents (or the zip) over the old files.
