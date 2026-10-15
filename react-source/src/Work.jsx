@@ -36,8 +36,8 @@ export function PersonalWork(){
     <div className="group-head"><h3>HubToolify</h3><a className="underlined" href={hubtoolify.url} target="_blank" rel="noreferrer">hubtoolify.com ↗</a></div>
     <p className="group-intro">My own product: online tools, icons, stickers and creative editors, built to make everyday work a little easier.</p>
     <div className="work-grid">{hubtoolify.tools.map((t,i)=><Card key={t.path} index={i+2} name={t.name} url={hubtoolify.url+t.path} image={t.image} description={t.description} meta="HubToolify"/>)}</div>
-    <div className="group-head"><h3>Gambolthemes</h3><a className="underlined" href={gambolthemes.url} target="_blank" rel="noreferrer">All {products.length} products ↗</a></div>
-    <p className="group-intro">Templates and scripts I’ve published on Gambolthemes, from HTML and PSD templates to Laravel platforms.</p>
+    <div className="group-head"><h3>Gambolthemes</h3><span className="head-links"><a className="underlined" href={gambolthemes.themeforest} target="_blank" rel="noreferrer">ThemeForest author ↗</a><a className="underlined" href={gambolthemes.url} target="_blank" rel="noreferrer">All {products.length} products ↗</a></span></div>
+    <p className="group-intro">Templates and scripts I’ve published on Gambolthemes and as a ThemeForest author since 2017, from HTML and PSD templates to Laravel platforms.</p>
     <div className="chips" role="group" aria-label="Filter products by type">{types.map(t=><button key={t} type="button" aria-pressed={type===t} onClick={()=>setType(t)}>{t} <span>{count(t)}</span></button>)}</div>
     <div className="work-grid">{shown.map(p=><Card key={p.slug} cover name={p.name} url={gambolthemes.url+'/'+p.slug} image={p.image} description={p.subtitle} meta={p.type}/>)}</div>
     <div className="product-bottom"><p>Great products start with a good conversation.<br/>Let’s bring your next idea to life.</p><a className="button black" href="#contact">Discuss a project</a></div>

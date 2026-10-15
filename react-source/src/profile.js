@@ -1,14 +1,14 @@
 // Add your verified details here, then run npm run build.
 export const profile = {
   name: 'Joginder Singh',
-  role: 'Freelance AI Claude Developer & Designer',
+  role: 'Freelance AI Developer & Designer',
   location: 'Ludhiana, Punjab, India',
   email: '', // Your public email. Shown in Contact and used for the form's email-draft fallback.
   formKey: '477600ef-b0b4-4456-9bca-92b6f295262d', // Public access key when formEndpoint is a form service such as https://api.web3forms.com/submit (the key only lets it deliver to your own inbox).
   formEndpoint: 'https://api.web3forms.com/submit', // Where the enquiry form posts JSON, e.g. './contact.php' (see public/contact.php) or a Formspree URL. Leave empty to use email instead.
   linkedin: '',
   github: '',
-  portrait: './portrait.jpg', // photo in public/, cropped to the About frame with the site's mint background
+  portrait: './portrait-square.jpg', // square photo in public/, shown whole (1:1) in the About frame
   resume: '', // e.g. './Joginder-Singh-Resume.pdf'; otherwise opens print-ready resume
 };
 
@@ -44,6 +44,7 @@ export const hubtoolify = {
 // Personal work: templates and scripts sold on Gambolthemes. Images are the product cover art.
 export const gambolthemes = {
   url: 'https://gambolthemes.net/products',
+  themeforest: 'https://themeforest.net/user/gambolthemes/',
   products: [
     {name:'Northwind Goods',subtitle:'React Ecommerce Storefront Template',type:'Site Templates',slug:'northwind-goods-react-ecommerce-template',image:'gt-northwind-goods.jpg'},
     {name:'Wishtales',subtitle:'AI Digital Greeting Card and Gift SaaS Platform',type:'PHP Scripts',slug:'wishtales-ai-digital-greeting-card-amp-gift-saas-platform',image:'gt-wishtales.webp'},

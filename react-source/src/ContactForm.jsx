@@ -1,7 +1,7 @@
 import React,{useRef,useState} from 'react';
 import {profile} from './profile';
 
-const services=['AI / Claude development','Website','Web app / SaaS','UI / UX design','Email design','Something else'];
+const services=['AI development','Website','Web app / SaaS','UI / UX design','Email design','Something else'];
 const timelines=['Not sure yet','As soon as possible','Within 1 month','In 2–3 months','Just exploring'];
 const MAX=1500;
 const emailOk=v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
