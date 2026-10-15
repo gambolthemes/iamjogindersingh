@@ -162,3 +162,21 @@
   .resume-nav{position:static;flex-direction:row;align-items:center;gap:16px;margin:auto 0 26px;height:54px;padding:0 16px;border-radius:12px;font-size:14px;letter-spacing:.8px;text-transform:uppercase;border:1px solid #2a2d2b}
   .resume-nav svg{width:22px;height:22px}
 }
+
+/* Sidebar music button: soft ambient music, off until the visitor presses it. */
+.sidebar nav .music-btn{position:relative;display:grid;place-items:center;width:64px;height:64px;border-radius:50%;color:#fff;background:none;transition:background .2s,color .2s}
+.sidebar nav .music-btn:hover,.sidebar nav .music-btn.on{color:var(--yellow);background:#202422}
+.sidebar nav .music-btn svg{width:32px;height:28px}
+.sidebar nav .music-btn line{stroke:currentColor;transition:stroke .2s}
+.sidebar nav .music-btn .tip{position:absolute;left:75px;top:16px;background:var(--yellow);padding:8px 13px;font-size:10px;color:#000;text-transform:uppercase;letter-spacing:1px;border-radius:4px;white-space:nowrap;opacity:0;transform:translateX(-5px);transition:.2s;pointer-events:none}
+.sidebar nav .music-btn:hover .tip,.sidebar nav .music-btn:focus-visible .tip{opacity:1;transform:none}
+.sidebar nav .music-btn .state{display:none}
+.music-btn .note{transform-origin:6px 17px;transition:transform .4s}
+.music-btn.on .note{animation:note-sway 2.4s ease-in-out infinite}
+@keyframes note-sway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+@media(max-width:700px){
+  .sidebar nav .music-btn{display:flex;align-items:center;justify-content:flex-start;gap:16px;width:100%;height:54px;padding:0 16px;border-radius:12px}
+  .sidebar nav .music-btn svg{width:26px;height:24px;flex:none}
+  .sidebar nav .music-btn .tip{position:static;opacity:1;transform:none;background:none;color:inherit;padding:0;border-radius:0;font-size:14px;letter-spacing:.8px}
+  .sidebar nav .music-btn .state{display:block;margin-left:auto;font-size:11px;letter-spacing:1px;text-transform:uppercase;opacity:.7}
+}

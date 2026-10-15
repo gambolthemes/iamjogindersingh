@@ -45,3 +45,8 @@ Subdomain document root is the iamjogindersingh folder (outside public_html), so
 4. hPanel > Websites > Advanced > SSL: make sure SSL is active for the subdomain and turn on "Force HTTPS".
 5. Open the address in a private window and hard-refresh (Ctrl+F5). Check /robots.txt and /og-image.jpg load.
 Later updates: npm run build in react-source, then upload the new dist contents (or the zip) over the old files.
+
+MUSIC
+The sidebar music button plays public/calm-soft.mp3 ("Calm Soft" by MondaMusic, from pixabay.com/music/soft-house-calm-soft-589127/, Pixabay Content License: free to use, no attribution needed). It starts only when a visitor presses the button and is downloaded only then.
+Do not offer the mp3 as a separate download or sell it on its own; that is not allowed by the Pixabay licence.
+To use another track put an mp3 in react-source/public/ and set music in src/profile.js. Make sure you have the licence for it. Empty music = soft ambient music generated in the browser.

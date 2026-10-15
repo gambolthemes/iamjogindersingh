@@ -4,6 +4,7 @@ export const profile = {
   role: 'Freelance AI Developer & Designer',
   location: 'Ludhiana, Punjab, India',
   email: '', // Your public email. Shown in Contact and used for the form's email-draft fallback.
+  music: './calm-soft.mp3', // track in public/: "Calm Soft" by MondaMusic (Pixabay Content License). Empty = soft ambient music generated in the browser.
   formKey: '477600ef-b0b4-4456-9bca-92b6f295262d', // Public access key when formEndpoint is a form service such as https://api.web3forms.com/submit (the key only lets it deliver to your own inbox).
   formEndpoint: 'https://api.web3forms.com/submit', // Where the enquiry form posts JSON, e.g. './contact.php' (see public/contact.php) or a Formspree URL. Leave empty to use email instead.
   linkedin: '',
